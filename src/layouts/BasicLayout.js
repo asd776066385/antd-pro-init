@@ -14,7 +14,6 @@ import logo from "../assets/logo.svg";
 import Footer from "./Footer";
 import Header from "./Header";
 import Context from "./MenuContext";
-import Exception403 from "../pages/Exception/403";
 import PageLoading from "@/components/PageLoading";
 import SiderMenu from "@/components/SiderMenu";
 
@@ -204,12 +203,13 @@ class BasicLayout extends React.PureComponent {
             {...this.props}
           />
           <Content style={this.getContentStyle()}>
-            <Authorized
+            {/* <Authorized
               authority={routerConfig && routerConfig.authority}
               noMatch={<Exception403 />}
             >
               {children}
-            </Authorized>
+            </Authorized> */}
+            {children}
           </Content>
           <Footer />
         </Layout>
