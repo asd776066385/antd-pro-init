@@ -2,6 +2,7 @@ export default {
   'menu.home': 'Início',
   'menu.dashboard': 'Dashboard',
   'menu.dashboard.analysis': 'Análise',
+  'menu.dashboard.sourceslist': 'SourcesList',
   'menu.dashboard.monitor': 'Monitor',
   'menu.dashboard.workplace': 'Ambiente de Trabalho',
   'menu.form': 'Formulário',

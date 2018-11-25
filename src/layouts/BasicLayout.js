@@ -9,7 +9,7 @@ import classNames from "classnames";
 import pathToRegexp from "path-to-regexp";
 import Media from "react-media";
 import { formatMessage } from "umi/locale";
-import Authorized from "@/utils/Authorized";
+// import Authorized from "@/utils/Authorized";
 import logo from "../assets/logo.svg";
 import Footer from "./Footer";
 import Header from "./Header";
@@ -122,13 +122,13 @@ class BasicLayout extends React.PureComponent {
     const currRouterData = this.matchParamsPath(pathname);
 
     if (!currRouterData) {
-      return "Ant Design Pro";
+      return "My Project";
     }
     const pageName = formatMessage({
       id: currRouterData.locale || currRouterData.name,
       defaultMessage: currRouterData.name
     });
-    return `${pageName} - Ant Design Pro`;
+    return `${pageName} - My Project`;
   };
 
   getLayoutStyle = () => {
