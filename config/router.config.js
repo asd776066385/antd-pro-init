@@ -28,6 +28,10 @@ export default [
             path: "/dashboard/analysis",
             name: "analysis",
             component: "./Dashboard/Analysis"
+          },{
+            path: "/dashboard/sourceslist",
+            name: "sources",
+            component: "./Dashboard/SourcesList"
           }
         ]
       },

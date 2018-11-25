@@ -1,26 +1,40 @@
-import { Card } from "antd";
+import React, { Component } from 'react';
+import { Card } from 'antd';
 
-export default () => {
-  const style = {
-    width: "400px",
-    margin: "30px",
-    boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2)",
-    border: "1px solid #e8e8e8"
-  };
-
-  return (
-    <Card style={style} actions={[<a>操作一</a>, <a>操作二</a>]}>
-      <Card.Meta
-        avatar={
-          <img
-            alt=""
-            style={{ width: "64px", height: "64px", borderRadius: "32px" }}
-            src="https://gw.alipayobjects.com/zos/rmsportal/WdGqmHpayyMjiEhcKoVE.png"
-          />
+export default class PuzzleCardsPage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      cardList: [
+        {
+          id: 1,
+          setup: 'Did you hear about the two silk worms in a race?',
+          punchline: 'It ended in a tie',
+        },
+        {
+          id: 2,
+          setup: 'What happens to a frog\'s car when it breaks down?',
+          punchline: 'It gets toad away',
+        },
+      ],
+    }
+  }
+  render() {
+    return (
+      <div>
+        {
+          this.state.cardList.map(card => {
+            return (
+              <Card key={card.id}>
+                <div>Q: {card.setup}</div>
+                <div>
+                  <strong>A: {card.punchline}</strong>
+                </div>
+              </Card>
+            );
+          })
         }
-        title="Alipay"
-        description="在中台产品的研发过程中，会出现不同的设计规范和实现方式，但其中往往存在很多类似的页面和组件，这些类似的组件会被抽离成一套标准规范。"
-      />
-    </Card>
-  );
-};
+      </div>
+    );
+  }
+}
